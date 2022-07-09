@@ -1,7 +1,15 @@
+const protocol = window.location.protocol;
+const domain = window.location.hostname;
+const port = window.location.port;
+
+
+const API_URL = `${protocol}://${domain}:${port? port : ""}`
+
+
 export const login = async ({ email, password } = {}) => {
   const user = { email, password };
   try {
-    const res = await fetch('http://localhost:57874/api/v1/users/login', {
+    const res = await fetch(`${API_URL}/api/v1/users/login`, {
       method: 'POST',
       credentials: 'include',
       headers: {
