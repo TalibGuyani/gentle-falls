@@ -1,10 +1,4 @@
-const protocol = window.location.protocol;
-const domain = window.location.hostname;
-const port = window.location.port;
-
-
-const API_URL = `${protocol}://${domain}:${port? port : ""}`
-
+const API_URL = 'https://gentle-falls-13064.herokuapp.com';
 
 export const login = async ({ email, password } = {}) => {
   const user = { email, password };
@@ -27,7 +21,7 @@ export const login = async ({ email, password } = {}) => {
 
 export const logout = async () => {
   try {
-    const res = await fetch('http://localhost:57874/api/v1/users/logout', {
+    const res = await fetch(`${API_URL}/api/v1/users/logout`, {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -43,7 +37,7 @@ export const logout = async () => {
 
 export const getUser = async () => {
   try {
-    const res = await fetch('http://localhost:57874/api/v1/users/me', {
+    const res = await fetch(`${API_URL}/api/v1/users/me`, {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -66,7 +60,7 @@ export const register = async ({
 } = {}) => {
   const user = { email, password, passwordConfirmation };
   try {
-    const res = await fetch('http://localhost:57874/api/v1/users/register', {
+    const res = await fetch(`/api/v1/users/register`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -86,7 +80,7 @@ export const forgotPassword = async ({ email } = {}) => {
   const user = { email };
   try {
     const res = await fetch(
-      'http://localhost:57874/api/v1/users/forgotpassword',
+      `/api/v1/users/forgotpassword`,
       {
         method: 'POST',
         credentials: 'include',
@@ -113,7 +107,7 @@ export const resetPassword = async ({
 
   try {
     const res = await fetch(
-      `http://localhost:57874/api/v1/users/resetpassword/${token}`,
+      `/api/v1/users/resetpassword/${token}`,
       {
         method: 'POST',
         /*credentials: "include",*/
