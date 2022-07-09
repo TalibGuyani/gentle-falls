@@ -60,7 +60,7 @@ export const register = async ({
 } = {}) => {
   const user = { email, password, passwordConfirmation };
   try {
-    const res = await fetch(`/api/v1/users/register`, {
+    const res = await fetch(`${API_URL}/api/v1/users/register`, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -80,7 +80,7 @@ export const forgotPassword = async ({ email } = {}) => {
   const user = { email };
   try {
     const res = await fetch(
-      `/api/v1/users/forgotpassword`,
+      `${API_URL}/api/v1/users/forgotpassword`,
       {
         method: 'POST',
         credentials: 'include',
@@ -107,7 +107,7 @@ export const resetPassword = async ({
 
   try {
     const res = await fetch(
-      `/api/v1/users/resetpassword/${token}`,
+      `${API_URL}/api/v1/users/resetpassword/${token}`,
       {
         method: 'POST',
         /*credentials: "include",*/
