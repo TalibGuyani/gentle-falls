@@ -1,7 +1,7 @@
 export const login = async ({ email, password } = {}) => {
   const user = { email, password };
   try {
-    const res = await fetch('http://localhost:3001/api/v1/users/login', {
+    const res = await fetch('http://localhost:57874/api/v1/users/login', {
       method: 'POST',
       credentials: 'include',
       headers: {
@@ -19,7 +19,7 @@ export const login = async ({ email, password } = {}) => {
 
 export const logout = async () => {
   try {
-    const res = await fetch('http://localhost:3001/api/v1/users/logout', {
+    const res = await fetch('http://localhost:57874/api/v1/users/logout', {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -35,7 +35,7 @@ export const logout = async () => {
 
 export const getUser = async () => {
   try {
-    const res = await fetch('http://localhost:3001/api/v1/users/me', {
+    const res = await fetch('http://localhost:57874/api/v1/users/me', {
       method: 'GET',
       credentials: 'include',
       headers: {
@@ -58,7 +58,7 @@ export const register = async ({
 } = {}) => {
   const user = { email, password, passwordConfirmation };
   try {
-    const res = await fetch('http://localhost:3001/api/v1/users/register', {
+    const res = await fetch('http://localhost:57874/api/v1/users/register', {
       method: 'POST',
       headers: {
         Accept: 'application/json',
@@ -78,7 +78,7 @@ export const forgotPassword = async ({ email } = {}) => {
   const user = { email };
   try {
     const res = await fetch(
-      'http://localhost:3001/api/v1/users/forgotpassword',
+      'http://localhost:57874/api/v1/users/forgotpassword',
       {
         method: 'POST',
         credentials: 'include',
@@ -105,7 +105,7 @@ export const resetPassword = async ({
 
   try {
     const res = await fetch(
-      `http://localhost:3001/api/v1/users/resetpassword/${token}`,
+      `http://localhost:57874/api/v1/users/resetpassword/${token}`,
       {
         method: 'POST',
         /*credentials: "include",*/
