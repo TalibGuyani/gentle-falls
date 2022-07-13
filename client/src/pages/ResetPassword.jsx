@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Video from '../components/Video';
+import Logo from '../components/Logo';
 import {
   IconButton,
   OutlinedInput,
@@ -57,6 +58,7 @@ const Home = () => {
       <div className="form_wrap">
         <div className="form_container">
           <div className="form_title">
+            <Logo />
             <h2>Reset Password</h2>
           </div>
           <div className="form_control">
@@ -90,7 +92,7 @@ const Home = () => {
               className="form-control"
               margin="normal"
             >
-              <InputLabel>Confirm Password</InputLabel>
+              <InputLabel>Confirm password</InputLabel>
               <OutlinedInput
                 label="PasswordConfirmation"
                 type="password"

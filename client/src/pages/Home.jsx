@@ -1,6 +1,7 @@
 import { Button } from '@mui/material';
 import { useContext } from 'react';
 import Video from '../components/Video';
+import Logo from '../components/Logo';
 
 import { UserContext } from '../contexts/UserContext';
 import { useNavigate } from 'react-router-dom';
@@ -28,7 +29,8 @@ const Home = () => {
       <div className="form_wrap">
         <div className="form_container">
           <div className="form_title">
-            <h2>RWH APP</h2>
+            <Logo />
+            <h2>Welcome</h2>
           </div>
           {!user ? (
             <div className="form_control">

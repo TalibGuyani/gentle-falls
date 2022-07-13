@@ -2,12 +2,17 @@ html, body, #root {
   margin: 0;
   padding: 0;
   height: 100%;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
+}
+
+.logo {
+  max-width: 250px;
 }
 
 h2 {
   font-weight: 400;
+  color: white;
 }
 
 .logo {
@@ -32,11 +37,11 @@ video {
   color: grey;
   text-align: center;
   margin-top: 3em;
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 300;
 }
 .form_wrap {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(0, 0, 0, 0.15);
   min-height: 100%;
   width: 100%;
   display: flex;

@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Video from '../components/Video';
+import Logo from '../components/Logo';
 import {
   IconButton,
   OutlinedInput,
@@ -51,7 +52,8 @@ const Login = () => {
       <div className="form_wrap">
         <div className="form_container">
           <div className="form_title">
-            <h2>login</h2>
+            <Logo />
+            <h2>Login</h2>
           </div>
           <div className="form_control">
             <FormControl
@@ -60,7 +62,7 @@ const Login = () => {
               className="form-control"
               margin="normal"
             >
-              <InputLabel>email</InputLabel>
+              <InputLabel>Email</InputLabel>
               <OutlinedInput
                 label="Email"
                 type={email}

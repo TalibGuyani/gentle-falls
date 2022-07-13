@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom'; 
 import Video from '../components/Video';
+import Logo from '../components/Logo';
 import {
 	TextField,
 	InputAdornment,
@@ -11,8 +12,6 @@ import {
 	Button,
   Link
 } from "@mui/material";
-import VisibilityIcon from "@mui/icons-material/Visibility";
-import VisibilityOffIcon from "@mui/icons-material/VisibilityOff";
 import { toast } from 'react-toastify';
 import { forgotPassword } from '../api/user';
 
@@ -46,6 +45,7 @@ const ForgotPassword = () => {
       <div className='form_wrap'>
         <div className="form_container">
           <div className="form_title">
+            <Logo />
             <h2>Forgot Password</h2>
           </div>
           <div className="form_control">
@@ -55,7 +55,7 @@ const ForgotPassword = () => {
 					className="form-control"
           margin="normal"
 				>
-					<InputLabel>email</InputLabel>
+					<InputLabel>Email</InputLabel>
 					<OutlinedInput
 						label="Email"         
 						type={email}

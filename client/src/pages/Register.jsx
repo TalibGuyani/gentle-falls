@@ -13,6 +13,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import Video from '../components/Video';
+import Logo from '../components/Logo';
 
 import { register } from '../api/user';
 import { useAuth } from '../contexts/UserContext';
@@ -62,6 +63,7 @@ const Register = () => {
       <div className="form_wrap">
         <div className="form_container">
           <div className="form_title">
+            <Logo />
             <h2>Register</h2>
           </div>
           <div className="form_control">
@@ -71,7 +73,7 @@ const Register = () => {
               className="form-control"
               margin="normal"
             >
-              <InputLabel>email</InputLabel>
+              <InputLabel>Email</InputLabel>
               <OutlinedInput
                 label="Email"
                 type={email}
@@ -107,7 +109,7 @@ const Register = () => {
               className="form-control"
               margin="normal"
             >
-              <InputLabel>Confirm Password</InputLabel>
+              <InputLabel>Confirm password</InputLabel>
               <OutlinedInput
                 label="PasswordConfirmation"
                 type="password"
